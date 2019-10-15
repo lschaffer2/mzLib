@@ -204,27 +204,27 @@ namespace IO.Thermo
             double[,] noiseData = pvarNoisePacket as double[,];
 
             double[,] data;
-            try
-            {
-                object pvarFlags = null;
-                object pvarLabels = null;
-                theConnection.GetLabelData(ref pvarLabels, ref pvarFlags, ref nScanNumber);
-                data = pvarLabels as double[,];
-                if (data == null || data.Length == 0)
-                {
-                    throw new MzLibException("For spectrum number " + nScanNumber + " the data is null!");
-                }
-            }
-            catch (MzLibException)
-            {
+            //try
+            //{
+            //    object pvarFlags = null;
+            //    object pvarLabels = null;
+            //    theConnection.GetLabelData(ref pvarLabels, ref pvarFlags, ref nScanNumber);
+            //    data = pvarLabels as double[,];
+            //    if (data == null || data.Length == 0)
+            //    {
+            //        throw new MzLibException("For spectrum number " + nScanNumber + " the data is null!");
+            //    }
+            //}
+            //catch (MzLibException)
+            //{
                 // Warning: the masses reported by GetMassListFromScanNum when centroiding are not properly calibrated and thus could be off by 0.3 m/z or more
 
                 double pdCentroidPeakWidth = 0;
                 object pvarnMassList = null;
                 object pvarPeakFlags = null;
-                theConnection.GetMassListFromScanNum(ref nScanNumber, null, 0, 0, 0, 1, ref pdCentroidPeakWidth, ref pvarnMassList, ref pvarPeakFlags, ref pnArraySize);
+                theConnection.GetMassListFromScanNum(ref nScanNumber, null, 0, 0, 0, 0, ref pdCentroidPeakWidth, ref pvarnMassList, ref pvarPeakFlags, ref pnArraySize);
                 data = (double[,])pvarnMassList;
-            }
+           // }
 
             MzSpectrum thermoSpectrum;
             if (filterParams != null && data.GetLength(1) > 0 && (filterParams.MinimumAllowedIntensityRatioToBasePeakM.HasValue || filterParams.NumberOfPeaksToKeepPerWindow.HasValue) && ((filterParams.ApplyTrimmingToMs1 && pnMSOrder == 1) || (filterParams.ApplyTrimmingToMsMs && pnMSOrder > 1)))

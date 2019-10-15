@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlashLFQ", "TestFlashLF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mgf", "Mgf\Mgf.csproj", "{D8BCAE00-E826-4771-A423-8B47D8D86EF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeBoxCarScans", "MergeBoxCarScans\MergeBoxCarScans.csproj", "{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,6 +171,12 @@ Global
 		{D8BCAE00-E826-4771-A423-8B47D8D86EF4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8BCAE00-E826-4771-A423-8B47D8D86EF4}.TestAndRelease|Any CPU.ActiveCfg = Release|Any CPU
 		{D8BCAE00-E826-4771-A423-8B47D8D86EF4}.TestAndRelease|Any CPU.Build.0 = Release|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.TestAndRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{954AC4BD-12F9-4BD9-B3FB-2A35932494A8}.TestAndRelease|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

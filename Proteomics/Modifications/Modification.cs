@@ -101,6 +101,11 @@ namespace Proteomics
             {
                 this.MonoisotopicMass = this.ChemicalFormula.MonoisotopicMass;
             }
+            if (this.MonoisotopicMass != null)
+            {
+                this.MonoisotopicMass = (double)Math.Round((double)MonoisotopicMass, 6);
+            }
+
         }
 
         public static string ModLocationOnPeptideOrProtein(string _locationRestriction)
